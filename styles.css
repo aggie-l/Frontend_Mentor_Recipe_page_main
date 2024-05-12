@@ -1,0 +1,218 @@
+@import url('https://fonts.googleapis.com/css2?family=Young+Serif&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Outfit&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@700&display=swap');
+
+*,
+*::before,
+*::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+:root {
+    --ff-young: "Young Serif", serif;
+    --ff-outfit: "Outfit", sans-serif;
+
+    --primary-nutmeg: hsl(14, 45%, 36%);
+    --primary-berry: hsl(332, 51%, 32%);
+
+    --neutral-white: hsl(0, 0%, 100%);
+    --neutral-rose: hsl(330, 100%, 98%);
+    --neutral-eggshell: hsl(30, 54%, 90%);
+    --neutral-lightgray: hsl(30, 18%, 87%);
+    --neutral-brown: hsl(30, 10%, 34%);
+    --neutral-charcoal: hsl(24, 5%, 18%);
+}
+
+body {
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1rem;
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+    background-color: var(--neutral-eggshell);
+    padding-block: 3rem;
+}
+
+.recipe-container {
+    display: flex;
+    max-width: 46rem;
+    padding: 2.5rem;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2.5rem;
+    border-radius: 1.5rem;
+    background-color: var(--neutral-white);
+}
+
+.top-img {
+    width: 100%;
+    align-self: stretch;
+    border-radius: 12px;
+}
+
+.recipe-description {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.recipe-title {
+    align-self: stretch;
+    color: var(--neutral-charcoal);
+    font-family: var(--ff-young);
+    font-size: 2.5rem;
+    margin-bottom: -0.5rem;
+}
+
+.recipe-subtext {
+    align-self: stretch;
+    color: var(--neutral-brown);
+    font-family: var(--ff-outfit);
+    line-height: 150%;
+}
+
+.preparation-container {
+    display: flex;
+    padding: 1.75rem;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+    align-self: stretch;
+    border-radius: 12px;
+    background: var(--neutral-rose);
+}
+
+.prep-title {
+    color: var(--primary-berry);
+    font-family: var(--ff-outfit);
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+
+.list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-left: 1.2rem;
+    list-style-type: none;
+}
+
+.unorder-li-item::before {
+    content: "•";
+    color: var(--primary-berry);
+    display: inline-block;
+    margin-left: -14px;
+    margin-right: 1.8rem;
+}
+
+.unorder-li-item,
+.order-li-item {
+    color: var(--neutral-brown);
+    font-family: var(--ff-outfit);
+    font-size: 1rem;
+}
+
+.unorder-li-item span,
+.order-li-item span {
+    font-weight: 700;
+    line-height: 150%;
+}
+
+.second-title {
+    align-self: stretch;
+    color: var(--primary-nutmeg);
+    font-family: var(--ff-young);
+    font-size: 1.75rem;
+    font-weight: 400;
+    margin-bottom: -8px;
+}
+
+hr {
+    border: 0;
+    border-bottom: 1px solid var(--neutral-lightgray);
+}
+
+.order-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-left: 1.4rem;
+}
+
+ol li::marker {
+    color: #854632;
+    font-weight: 700; 
+}
+
+.order-li-item {
+    padding-left: 1rem;
+}
+
+.nutrition-subtext {
+    color: var(--neutral-brown);
+    font-family: var(--ff-outfit);
+    font-size: 1rem;
+    line-height: 150%;
+    margin-bottom: -8px;
+}
+
+.nutrition-table tr td {
+    color: var(--neutral-brown);
+    font-family: var(--ff-outfit);
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 150%;
+}
+
+th {
+    color: #854632;
+    font-weight: 700;
+    font-family: var(--ff-outfit);
+    line-height: 150%;
+}
+
+table {
+    border-collapse: collapse;
+}
+  
+tr {
+    border-bottom: 1px solid #E3DDD7;
+}
+
+td, th {
+    padding: 12px 32px;
+}
+
+th {
+    text-align: left;
+}
+
+.last-row {
+    border: none;
+}
+
+@media screen and (max-width: 375px) {
+    .recipe-container {
+        padding: 0;
+        gap: 2.5rem;
+        border-radius: 0;
+    }
+
+    .top-img {
+        border-radius: 0;
+    }
+
+    .recipe-description {
+        padding: 0 32px 40px 32px;
+    }
+
+    .recipe-title {
+        font-size: 36px;
+    }
+}
